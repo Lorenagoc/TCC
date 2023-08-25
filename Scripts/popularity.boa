@@ -1,0 +1,29 @@
+# mining how many projects use AWT
+projectsCount: output sum of int;
+
+awt := false;
+
+visit(input, visitor {
+    after node: Project ->
+        if (awt)
+            projectsCount << 1;
+	# only look at the latest snapshot of Java files
+	before n: CodeRepository -> {
+		snapshot := getsnapshot(n, "SOURCE_JAVA_JLS");
+		foreach (i: int; def(snapshot[i]))
+			visit(snapshot[i]);
+		stop;
+	}
+	# look for imports
+	before node: ASTRoot ->
+	    exists(j: int; match("junit", node.imports[j])) {
+			awt = true;
+			stop;
+	    }
+	# look for FQN
+	before node: Type ->
+	    if (match("junit", node.name)) {
+			awt = true;
+			stop;
+	    }
+});
