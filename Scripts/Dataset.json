@@ -15,7 +15,7 @@
         "SOtags": "scalatest",
         "Package": "org.scalatest",
         "GitHubURL": "git://github.com/scalatest/scalatest",
-        "MavenURL":"https://https://mvnrepository.com/artifact/org.scalatest/scalatest"
+        "MavenURL":"https://mvnrepository.com/artifact/org.scalatest/scalatest"
       },
       {
         "LibraryName": "junit5",

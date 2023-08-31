@@ -23,10 +23,15 @@ from boaapi.status import CompilerStatus, ExecutionStatus
 #         else : continue
 #     return artifacts
 
-def get_artifact_names():    
-    with open("artifacts_out.txt", "r") as txt_file:
-        artifacts = txt_file.read().splitlines()
+def get_artifact_names():
+    artifacts = {}
+    with open('Dataset.json', 'r') as myfile:
+        artifacts = json.loads(myfile.read(),strict=False)
     return artifacts
+  
+    # with open("artifacts_out.txt", "r") as txt_file:
+    #     artifacts = txt_file.read().splitlines()
+    # return artifacts
 
 def boa_search(artifact_id):
 
@@ -106,8 +111,10 @@ visit(input, visitor {{
 def main():
     artifact_names = get_artifact_names()
     for artifact_name in artifact_names:
-        print("Searching for artifact: " + artifact_name + "..." + "\n")
-        boa_search(artifact_name)
+        print()
+        print("Searching for cleaartifact: " + str(artifact_name["LibraryName"]) + "..." + "\n")
+        # Ainda não funcionou
+        boa_search("*" + artifact_name["LibraryName"].replace("-", '.') + "*")
 
 if __name__ == "__main__":
     main()
