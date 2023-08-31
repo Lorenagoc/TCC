@@ -1,0 +1,560 @@
+[
+    {
+      "LibraryName": "junit4",
+      "Domain": "Testing",
+      "FullRepoName": "junit-team/junit4",
+      "SOtags": "junit",
+      "Package": "org.junit",
+      "GitHubURL": "git://github.com/junit-team/junit4.git",
+      "MavenURL":"https://mvnrepository.com/artifact/junit/junit"
+    },
+    {
+        "LibraryName": "scalatest",
+        "Domain": "Testing",
+        "FullRepoName": "scalatest/scalatest",
+        "SOtags": "scalatest",
+        "Package": "org.scalatest",
+        "GitHubURL": "git://github.com/scalatest/scalatest",
+        "MavenURL":"https://https://mvnrepository.com/artifact/org.scalatest/scalatest"
+      },
+      {
+        "LibraryName": "junit5",
+        "Domain": "Testing",
+        "FullRepoName": "junit-team/junit5",
+        "SOtags": "junit5",
+        "Package": "org.junit.jupiter",
+        "GitHubURL": "git://github.com/junit-team/junit5.git",
+        "MavenURL":"https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api"
+      },
+    {
+      "LibraryName": "testng",
+      "Domain": "Testing",
+      "FullRepoName": "cbeust/testng",
+      "SOtags": "testng",
+      "Package": "org.testng",
+      "GitHubURL": "git://github.com/cbeust/testng.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.testng/testng"
+    },
+    {
+      "LibraryName": "slf4j",
+      "Domain": "Logging",
+      "FullRepoName": "qos-ch/slf4j",
+      "SOtags": "slf4j",
+      "Package": "org.slf4j",
+      "GitHubURL": "git://github.com/qos-ch/slf4j.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.slf4j/slf4j-api"
+    },
+    {
+      "LibraryName": "logging-log4j2",
+      "Domain": "Logging",
+      "FullRepoName": "apache/logging-log4j2",
+      "SOtags": "log4j",
+      "Package": "org.apache.log4j",
+      "GitHubURL": "git://github.com/apache/logging-log4j2.git",
+      "MavenURL":"https://mvnrepository.com/artifact/log4j/log4j"
+    },
+    {
+      "LibraryName": "logback",
+      "Domain": "Logging",
+      "FullRepoName": "qos-ch/logback",
+      "SOtags": "logback",
+      "Package": "ch.qos.logback",
+      "GitHubURL": "git://github.com/qos-ch/logback.git",
+      "MavenURL":"https://mvnrepository.com/artifact/ch.qos.logback/logback-classic"
+    },
+    {
+      "LibraryName": "commons-logging",
+      "Domain": "Logging",
+      "FullRepoName": "apache/commons-logging",
+      "SOtags": "apache-commons-logging",
+      "Package": "org.apache.commons.logging",
+      "GitHubURL": "git://github.com/apache/commons-logging.git",
+      "MavenURL":"https://mvnrepository.com/artifact/commons-logging/commons-logging"
+    },
+    {
+      "LibraryName": "tinylog",
+      "Domain": "Logging",
+      "FullRepoName": "tinylog-org/tinylog",
+      "SOtags": "tinylog",
+      "Package": "org.tinylog",
+      "GitHubURL": "git://github.com/tinylog-org/tinylog.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.tinylog/tinylog"
+    },
+    {
+      "LibraryName": "blitz4j",
+      "Domain": "Logging",
+      "FullRepoName": "Netflix/blitz4j",
+      "SOtags": "blitz4j",
+      "Package": "com.netflix.blitz4j",
+      "GitHubURL": "git://github.com/Netflix/blitz4j.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.netflix.blitz4j/blitz4j"
+    },
+    {
+      "LibraryName": "minlog",
+      "Domain": "Logging",
+      "FullRepoName": "EsotericSoftware/minlog",
+      "SOtags": "minlog",
+      "Package": "com.esotericsoftware.minlog",
+      "GitHubURL": "git://github.com/EsotericSoftware/minlog.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.esotericsoftware/minlog"
+    },
+    {
+      "LibraryName": "guava",
+      "Domain": "Utilities",
+      "FullRepoName": "google/guava",
+      "SOtags": "guava",
+      "Package": "com.google.common",
+      "GitHubURL": "git://github.com/google/guava.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.google.guava/guava"
+    },
+    {
+        "LibraryName": "spring-framework",
+        "Domain": "Utilities",
+        "FullRepoName": "spring-projects/spring-framework",
+        "SOtags": "spring",
+        "Package": "com.google.common",
+        "GitHubURL": "git://github.com/spring-projects/spring-framework.git",
+        "MavenURL":"https://mvnrepository.com/artifact/org.springframework/spring-core"
+      },
+    {
+      "LibraryName": "commons-lang",
+      "Domain": "Utilities",
+      "FullRepoName": "apache/commons-lang",
+      "SOtags": "apache-commons-lang",
+      "Package": "org.apache.commons.lang",
+      "GitHubURL": "git://github.com/apache/commons-lang.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.commons/commons-lang3"
+    },
+    {
+        "LibraryName": "plexus-utils",
+        "Domain": "Utilities",
+        "FullRepoName": "codehaus-plexus/plexus-utils",
+        "SOtags": "plexus",
+        "Package": "org.codehaus.plexus",
+        "GitHubURL": "git://github.com/codehaus-plexus/plexus-utils.git",
+        "MavenURL":"https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-utils"
+      },
+    {
+      "LibraryName": "mockito",
+      "Domain": "Mocking",
+      "FullRepoName": "mockito/mockito",
+      "SOtags": "mockito",
+      "Package": "org.mockito",
+      "GitHubURL": "git://github.com/mockito/mockito.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.mockito/mockito-core"
+    },
+    {
+      "LibraryName": "easymock",
+      "Domain": "Mocking",
+      "FullRepoName": "easymock/easymock",
+      "SOtags": "easymock",
+      "Package": "org.easymock",
+      "GitHubURL": "git://github.com/easymock/easymock.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.easymock/easymock"
+    },
+    {
+      "LibraryName": "powermock",
+      "Domain": "Mocking",
+      "FullRepoName": "powermock/powermock",
+      "SOtags": "powermock",
+      "Package": "org.powermock",
+      "GitHubURL": "git://github.com/powermock/powermock.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4"
+    },
+    {
+      "LibraryName": "jmock-library",
+      "Domain": "Mocking",
+      "FullRepoName": "jmock-developers/jmock-library",
+      "SOtags": "jmock",
+      "Package": "org.jmock",
+      "GitHubURL": "git://github.com/jmock-developers/jmock-library.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.jmock/jmock"
+    },
+    {
+      "LibraryName": "bc-java",
+      "Domain": "Cryptography",
+      "FullRepoName": "bcgit/bc-java",
+      "SOtags": "bouncycastle",
+      "Package": "org.bouncycastle",
+      "GitHubURL": "git://github.com/bcgit/bc-java.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.bouncycastle"
+    },
+    {
+      "LibraryName": "commons-crypto",
+      "Domain": "Cryptography",
+      "FullRepoName": "apache/commons-crypto",
+      "SOtags": "apache-commons-crypto",
+      "Package": "org.apache.commons.crypto",
+      "GitHubURL": "git://github.com/apache/commons-crypto.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.commons/commons-crypto"
+    },
+    {
+      "LibraryName": "conceal",
+      "Domain": "Cryptography",
+      "FullRepoName": "facebookarchive/conceal",
+      "SOtags": "facebook-conceal",
+      "Package": "com.facebook.crypto",
+      "GitHubURL": "git://github.com/facebookarchive/conceal.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.facebook.conceal/conceal"
+    },
+    {
+      "LibraryName": "spongycastle",
+      "Domain": "Cryptography",
+      "FullRepoName": "rtyley/spongycastle",
+      "SOtags": "spongycastle",
+      "Package": "org.spongycastle",
+      "GitHubURL": "git://github.com/rtyley/spongycastle.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.madgag.spongycastle/core"
+    },
+    {
+      "LibraryName": "keyczar",
+      "Domain": "Cryptography",
+      "FullRepoName": "google/keyczar",
+      "SOtags": "keyczar",
+      "Package": "org.keyczar",
+      "GitHubURL": "git://github.com/google/keyczar.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.keyczar/keyczar"
+    },
+    {
+      "LibraryName": "conscrypt",
+      "Domain": "Cryptography",
+      "FullRepoName": "google/conscrypt",
+      "SOtags": "conscrypt",
+      "Package": "com.android.org.conscrypt",
+      "GitHubURL": "git://github.com/google/conscrypt.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.conscrypt/conscrypt-android"
+    },
+    {
+      "LibraryName": "gson",
+      "Domain": "JSON",
+      "FullRepoName": "google/gson",
+      "SOtags": "gson",
+      "Package": "com.google.gson",
+      "GitHubURL": "git://github.com/google/gson.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.google.code.gson/gson"
+    },
+    {
+      "LibraryName": "json-simple",
+      "Domain": "JSON",
+      "FullRepoName": "fangyidong/json-simple",
+      "SOtags": "json-simple",
+      "Package": "org.json.simple",
+      "GitHubURL": "git://github.com/fangyidong/json-simple.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple"
+    },
+    {
+        "LibraryName": "jackson-databind",
+        "Domain": "JSON",
+        "FullRepoName": "FasterXML/jackson-databind",
+        "SOtags": "jackson-databind",
+        "Package": "com.fasterxml.jackson.core",
+        "GitHubURL": "git://github.com/FasterXML/jackson-databind.git",
+        "MavenURL":"https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind"
+      },
+      {
+        "LibraryName": "fastjson",
+        "Domain": "JSON",
+        "FullRepoName": "alibaba/fastjson",
+        "SOtags": "fastjson",
+        "Package": "com.alibaba",
+        "GitHubURL": "git://github.com/alibaba/fastjson.git",
+        "MavenURL":"https://mvnrepository.com/artifact/com.alibaba/fastjson"
+      },
+    {
+      "LibraryName": "h2database",
+      "Domain": "Databases",
+      "FullRepoName": "h2database/h2database",
+      "SOtags": "h2",
+      "Package": "org.h2",
+      "GitHubURL": "git://github.com/h2database/h2database.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.h2database/h2"
+    },
+    {
+      "LibraryName": "lsql",
+      "Domain": "Databases",
+      "FullRepoName": "w11k/lsql",
+      "SOtags": "lsql",
+      "Package": "com.w11k.lsql",
+      "GitHubURL": "git://github.com/w11k/lsql.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.spark/spark-sql"
+    },
+    {
+      "LibraryName": "derby",
+      "Domain": "Databases",
+      "FullRepoName": "apache/derby",
+      "SOtags": "derby",
+      "Package": "org.apache.derby",
+      "GitHubURL": "git://github.com/apache/derby.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.derby/derby"
+    },
+    {
+        "LibraryName": "mysql-connector-j",
+        "Domain": "Databases",
+        "FullRepoName": "mysql/mysql-connector-j",
+        "SOtags": "mysql-connector",
+        "Package": "mysql",
+        "GitHubURL": "git://github.com/mysql/mysql-connector-j.git",
+        "MavenURL":"https://mvnrepository.com/artifact/mysql/mysql-connector-java"
+      },
+    {
+      "LibraryName": "shiro",
+      "Domain": "Security",
+      "FullRepoName": "apache/shiro",
+      "SOtags": "shiro",
+      "Package": "org.apache.shiro",
+      "GitHubURL": "git://github.com/apache/shiro.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.shiro/shiro-core"
+    },
+    {
+      "LibraryName": "spring-security",
+      "Domain": "Security",
+      "FullRepoName": "spring-projects/spring-security",
+      "SOtags": "spring-security",
+      "Package": "org.springframework.security",
+      "GitHubURL": "git://github.com/spring-projects/spring-security.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.springframework.security/spring-security-core"
+    },
+    {
+        "LibraryName": "hdiv",
+        "Domain": "Security",
+        "FullRepoName": "hdiv/hdiv",
+        "SOtags": "hdiv",
+        "Package": "org.hdiv",
+        "GitHubURL": "git://github.com/hdiv/hdiv.git",
+        "MavenURL":"https://mvnrepository.com/artifact/org.hdiv/hdiv-core"
+      },
+      {
+        "LibraryName": "acciente-oacc",
+        "Domain": "Security",
+        "FullRepoName": "acciente/oacc-core",
+        "SOtags": "",
+        "Package": "com.acciente.oacc",
+        "GitHubURL": "git://github.com/acciente/oacc-core.git",
+        "MavenURL":"https://mvnrepository.com/artifact/com.acciente.oacc/acciente-oacc"
+      },
+    {
+      "LibraryName": "hibernate-orm",
+      "Domain": "Object-relational Mapping",
+      "FullRepoName": "hibernate/hibernate-orm",
+      "SOtags": "hibernate",
+      "Package": "org.hibernate",
+      "GitHubURL": "git://github.com/hibernate/hibernate-orm.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core"
+    },
+    {
+      "LibraryName": "mybatis-3",
+      "Domain": "Object-relational Mapping",
+      "FullRepoName": "mybatis/mybatis-3",
+      "SOtags": "mybatis",
+      "Package": "org.apache.ibatis",
+      "GitHubURL": "git://github.com/mybatis/mybatis-3.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.mybatis/mybatis"
+    },
+    {
+      "LibraryName": "ormlite-android",
+      "Domain": "Object-relational Mapping",
+      "FullRepoName": "j256/ormlite-android",
+      "SOtags": "ormlite",
+      "Package": "com.j256.ormlite",
+      "GitHubURL": "git://github.com/j256/ormlite-android.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-android"
+    },
+    {
+        "LibraryName": "spring-orm",
+        "Domain": "Object-relational Mapping",
+        "FullRepoName": "spring-projects/spring-framework/spring-orm",
+        "SOtags": "spring-orm",
+        "Package": "org.springframework",
+        "GitHubURL": "git://github.com/spring-projects/spring-framework/tree/main/spring-orm.git",
+        "MavenURL":"https://mvnrepository.com/artifact/org.springframework/spring-orm"
+      },
+    {
+      "LibraryName": "xerces2-j",
+      "Domain": "XML Processing",
+      "FullRepoName": "apache/xerces2-j",
+      "SOtags": "xerces2-j",
+      "Package": "org.apache.xerces",
+      "GitHubURL": "git://github.com/apache/xerces2-j.git",
+      "MavenURL":"https://mvnrepository.com/artifact/xerces/xercesImpl"
+    },
+    {
+      "LibraryName": "dom4j",
+      "Domain": "XML Processing",
+      "FullRepoName": "dom4j/dom4j",
+      "SOtags": "dom4j",
+      "Package": "org.dom4j",
+      "GitHubURL": "git://github.com/dom4j/dom4j.git",
+      "MavenURL":"https://mvnrepository.com/artifact/dom4j/dom4j"
+    },
+    {
+      "LibraryName": "jdom",
+      "Domain": "XML Processing",
+      "FullRepoName": "hunterhacker/jdom",
+      "SOtags": "jdom",
+      "Package": "org.jdom",
+      "GitHubURL": "git://github.com/hunterhacker/jdom.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.jdom/jdom"
+    },
+    {
+        "LibraryName": "jaxb",
+        "Domain": "XML Processing",
+        "FullRepoName": "javaee/jaxb-v2",
+        "SOtags": "jaxb",
+        "Package": "javax.xml.bind",
+        "GitHubURL": "git://github.com/javaee/jaxb-v2.git",
+        "MavenURL":"https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api"
+      },
+    {
+      "LibraryName": "vertx-mail-client",
+      "Domain": "Mail Client",
+      "FullRepoName": "vert-x3/vertx-mail-client",
+      "SOtags": "vertx-mail-client",
+      "Package": "io.vertx.ext.mail",
+      "GitHubURL": "git://github.com/vert-x3/vertx-mail-client.git",
+      "MavenURL":"https://mvnrepository.com/artifact/io.vertx/vertx-mail-client"
+    },
+    {
+      "LibraryName": "commons-email",
+      "Domain": "Mail Client",
+      "FullRepoName": "apache/commons-email",
+      "SOtags": "apache-commons-email",
+      "Package": "org.apache.commons.mail",
+      "GitHubURL": "git://github.com/apache/commons-email.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.commons/commons-email"
+    },
+    {
+        "LibraryName": "javamail",
+        "Domain": "Mail Client",
+        "FullRepoName": "javaee/javamail",
+        "SOtags": "javamail",
+        "Package": "com.sun.mail",
+        "GitHubURL": "git://github.com/javaee/javamail.git",
+        "MavenURL":"https://mvnrepository.com/artifact/com.sun.mail/javax.mail"
+      },
+      {
+        "LibraryName": "jakarta",
+        "Domain": "Mail Client",
+        "FullRepoName": "jakartaee/mail-api",
+        "SOtags": "jakarta-mail",
+        "Package": "com.sun.mail",
+        "GitHubURL": "git:https://github.com/jakartaee/mail-api.git",
+        "MavenURL":"https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail"
+      },
+    {
+      "LibraryName": "commons-collections",
+      "Domain": "Collections",
+      "FullRepoName": "apache/commons-collections",
+      "SOtags": "apache-commons-collection",
+      "Package": "org.apache.commons.collections",
+      "GitHubURL": "git://github.com/apache/commons-collections.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.commons/commons-collections4"
+    },
+    {
+      "LibraryName": "fastutil",
+      "Domain": "Collections",
+      "FullRepoName": "vigna/fastutil",
+      "SOtags": "fastutil",
+      "Package": "it.unimi.dsi.fastutil",
+      "GitHubURL": "git://github.com/vigna/fastutil.git",
+      "MavenURL":"https://mvnrepository.com/artifact/it.unimi.dsi/fastutil"
+    },
+    {
+      "LibraryName": "mapdb",
+      "Domain": "Collections",
+      "FullRepoName": "jankotek/mapdb",
+      "SOtags": "mapdb",
+      "Package": "org.mapdb",
+      "GitHubURL": "git://github.com/jankotek/mapdb.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.mapdb/mapdb"
+    },
+    {
+      "LibraryName": "hppc",
+      "Domain": "Collections",
+      "FullRepoName": "carrotsearch/hppc",
+      "SOtags": "hppc",
+      "Package": "com.carrotsearch.hppc",
+      "GitHubURL": "git://github.com/carrotsearch/hppc.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.carrotsearch/hppc"
+    },
+    {
+      "LibraryName": "high-scale-lib",
+      "Domain": "Collections",
+      "FullRepoName": "stephenc/high-scale-lib",
+      "SOtags": "high-scale-lib",
+      "Package": "org.cliffc.high_scale_lib",
+      "GitHubURL": "git://github.com/stephenc/high-scale-lib.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.github.stephenc.high-scale-lib/high-scale-lib"
+    },
+    {
+      "LibraryName": "eclipse-collections",
+      "Domain": "Collections",
+      "FullRepoName": "eclipse/eclipse-collections",
+      "SOtags": "eclipse-collections",
+      "Package": "org.eclipse.collections",
+      "GitHubURL": "git://github.com/eclipse/eclipse-collections.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections"
+    },
+    {
+      "LibraryName": "jcommon",
+      "Domain": "Collections",
+      "FullRepoName": "facebookarchive/jcommon",
+      "SOtags": "facebook-jcommon",
+      "Package": "com.facebook.util",
+      "GitHubURL": "git://github.com/facebookarchive/jcommon.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.facebook.jcommon/util"
+    },
+    {
+      "LibraryName": "smile",
+      "Domain": "Machine Learning",
+      "FullRepoName": "haifengl/smile",
+      "SOtags": "smile",
+      "Package": "smile",
+      "GitHubURL": "git://github.com/haifengl/smile.git",
+      "MavenURL":"https://mvnrepository.com/artifact/com.github.haifengl/smile-core"
+    },
+    {
+      "LibraryName": "deeplearning4j",
+      "Domain": "Machine Learning",
+      "FullRepoName": "deeplearning4j/deeplearning4j",
+      "SOtags": "deeplearning4j",
+      "Package": "org.deeplearning4j",
+      "GitHubURL": "git://github.com/deeplearning4j/deeplearning4j.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core"
+    },
+    {
+      "LibraryName": "moa",
+      "Domain": "Machine Learning",
+      "FullRepoName": "Waikato/moa",
+      "SOtags": "moa",
+      "Package": "moa",
+      "GitHubURL": "git://github.com/Waikato/moa.git",
+      "MavenURL":"https://mvnrepository.com/artifact/nz.ac.waikato.cms.moa/moa"
+    },
+    {
+      "LibraryName": "elki",
+      "Domain": "Machine Learning",
+      "FullRepoName": "elki-project/elki",
+      "SOtags": "elki",
+      "Package": "de.lmu.ifi.dbs.elki",
+      "GitHubURL": "git://github.com/elki-project/elki.git",
+      "MavenURL":"https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki"
+    },
+    {
+      "LibraryName": "mahout",
+      "Domain": "Machine Learning",
+      "FullRepoName": "apache/mahout",
+      "SOtags": "mahout",
+      "Package": "org.apache.mahout",
+      "GitHubURL": "git://github.com/apache/mahout.git",
+      "MavenURL":"https://mvnrepository.com/artifact/org.apache.mahout/mahout-mr"
+    },
+    {
+      "LibraryName": "Mallet",
+      "Domain": "Machine Learning",
+      "FullRepoName": "mimno/Mallet",
+      "SOtags": "mallet",
+      "Package": "cc.mallet",
+      "GitHubURL": "git://github.com/mimno/Mallet.git",
+      "MavenURL":"https://mvnrepository.com/artifact/cc.mallet/mallet"
+    }
+   ]
