@@ -16,13 +16,13 @@ visit(input, visitor {
 	}
 	# look for imports
 	before node: ASTRoot ->
-	    exists(j: int; match("junit", node.imports[j])) {
+	    exists(j: int; match("junit5", node.imports[j])) {
 			awt = true;
 			stop;
 	    }
 	# look for FQN
 	before node: Type ->
-	    if (match("junit", node.name)) {
+	    if (match("junit5", node.name)) {
 			awt = true;
 			stop;
 	    }

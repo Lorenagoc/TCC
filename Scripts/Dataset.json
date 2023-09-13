@@ -362,7 +362,7 @@
     {
         "LibraryName": "spring-orm",
         "Domain": "Object-relational Mapping",
-        "FullRepoName": "spring-projects/spring-framework/spring-orm",
+        "FullRepoName": "spring-projects/spring-framework",
         "SOtags": "spring-orm",
         "Package": "org.springframework",
         "GitHubURL": "git://github.com/spring-projects/spring-framework/tree/main/spring-orm.git",

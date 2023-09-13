@@ -1,53 +1,45 @@
+"""
+- Script para buscar a popularidade de bibliotecas através de uma query na API do Boa.
+- O script busca pelos imports das bibliotecas em projetos Java do GitHub.
+- Query Boa fonececido por: Eduardo Cunha Campos (Orientador)
+- Referência: https://github.com/ualberta-smr/LibraryMetricScripts
+"""
+
 import getpass
 import json
 import time
-import requests
 import re
 
 from boaapi.boa_client import BoaClient, BOA_API_ENDPOINT
 from boaapi.status import CompilerStatus, ExecutionStatus
 
-# def get_artifact_names(start, rows):
-#     url = f"https://search.maven.org/solrsearch/select?q=*:*&rows={rows}&start={start}&wt=json"
-#     response = requests.get(url)
-#     data = response.json()
 
-#     artifacts = []
-#     docs = data["response"]["docs"]
-#     for doc in docs:
-#         artifact_id = doc["a"]
-#         if artifact_id not in artifacts :
-#             artifact_id = artifact_id.replace("-", '.')
-#             boa_search(artifact_id)
-#             artifacts.append(artifact_id)
-#         else : continue
-#     return artifacts
+def send_totals_to_file(output_file, keyword, num_found):
+    output_file = open(output_file, "a")
+    output_file.write(keyword + ":" + str(num_found) + "\n")
+    output_file.close()
+
 
 def get_artifact_names():
     artifacts = {}
-    with open('Dataset.json', 'r') as myfile:
-        artifacts = json.loads(myfile.read(),strict=False)
+    with open("Dataset.json", "r") as myfile:
+        artifacts = json.loads(myfile.read(), strict=False)
     return artifacts
-  
-    # with open("artifacts_out.txt", "r") as txt_file:
-    #     artifacts = txt_file.read().splitlines()
-    # return artifacts
+
 
 def boa_search(artifact_id):
-
     # Username: lorenacabral
     # Password: Lo090899@
 
     client = BoaClient(endpoint=BOA_API_ENDPOINT)
     client.login("lorenacabral", "Lo090899@")
-    
+
+    # Login com credenciais
     # user = input("Username [%s]: " % getpass.getuser())
     # if not user:
-    #     user = getpass.getuser()
+    #   user = getpass.getuser()
     # client.login(user, getpass.getpass())
     # print("successfully logged in to Boa API")
-
-    # artifact_id = "org.junit"
 
     query = f"""
 projectsCount: output sum of int;
@@ -78,11 +70,9 @@ visit(input, visitor {{
 }});
  """
 
-    # print(query)
-
+    artifact_popularity = 0
     # query using a specific dataset
-    # job = client.query(query, client.get_dataset("2019 October/GitHub"))
-    job = client.query(query, client.get_dataset("2019 October/GitHub (medium)"))
+    job = client.query(query, client.get_dataset("2019 October/GitHub"))
     print("query submitted")
 
     while job.is_running():
@@ -96,26 +86,29 @@ visit(input, visitor {{
         print("job " + str(job.id) + " had exec error")
     else:
         try:
-            print("output: ")
-            print(re.search(r'\d+', job.output()).group())
-            # with open("popularidade.txt", "w") as txt_file:
-            #     for projectCount in job.output().find("projectsCount"):
-            #         txt_file.write(projectCount + "\n")
-            # txt_file.close()
+            artifact_popularity = re.search(r"\d+", job.output()).group()
         except:
             pass
 
     client.close()
     print("client closed")
+    return artifact_popularity
+
 
 def main():
     artifact_names = get_artifact_names()
     for artifact_name in artifact_names:
-        print()
-        print("Searching for cleaartifact: " + str(artifact_name["LibraryName"]) + "..." + "\n")
-        # Ainda não funcionou
-        boa_search("*" + artifact_name["LibraryName"].replace("-", '.') + "*")
+        print(
+            "Searching for cleaartifact: "
+            + str(artifact_name["LibraryName"])
+            + "..."
+            + "\n"
+        )
+        artifact_popularity = boa_search(artifact_name["LibraryName"].replace("-", "."))
+        send_totals_to_file(
+            "popularity.txt", artifact_name["LibraryName"], artifact_popularity
+        )
+
 
 if __name__ == "__main__":
     main()
-        
