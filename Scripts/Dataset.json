@@ -327,7 +327,7 @@
         "LibraryName": "acciente-oacc",
         "Domain": "Security",
         "FullRepoName": "acciente/oacc-core",
-        "SOtags": "",
+        "SOtags": "-",
         "Package": "com.acciente.oacc",
         "GitHubURL": "git://github.com/acciente/oacc-core.git",
         "MavenURL":"https://mvnrepository.com/artifact/com.acciente.oacc/acciente-oacc"
