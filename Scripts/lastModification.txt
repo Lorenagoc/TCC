@@ -1,0 +1,5 @@
+junit-team/junit4:08-12-2022 18:36:17
+scalatest/scalatest:27-09-2023 14:01:20
+junit-team/junit5:25-09-2023 15:09:10
+cbeust/testng:28-09-2023 15:18:27
+qos-ch/slf4j:03-09-2023 20:56:46

@@ -65,7 +65,7 @@ def get_repository_name():
     for artifact in artifacts:
         repository_name = artifact["FullRepoName"]
         average = get_frequency_release(repository_name)
-        send_average_to_file("averageFrequencyRelease.txt", repository_name, average)
+        send_average_to_file("frequency.txt", repository_name, average)
 
 if __name__ == "__main__":
     get_repository_name()

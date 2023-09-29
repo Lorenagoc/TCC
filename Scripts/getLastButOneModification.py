@@ -1,7 +1,7 @@
 from github import Github
 import json
 
-def sendLastModificationDateToFile(output_file, keyword, num_found):
+def sendLastButOneModificationDateToFile(output_file, keyword, num_found):
     output_file = open(output_file, "a")
     output_file.write(keyword + ":" + str(num_found) + "\n")
     output_file.close()
@@ -12,7 +12,7 @@ def getArtifacts():
         artifacts = json.loads(myfile.read(), strict=False)
     return artifacts
 
-def getLastModificationDate(repository_name):
+def getLastButOneModificationDate(repository_name):
     
     # Inicializa a instância do Github
     g = Github("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", timeout=30)
@@ -20,9 +20,9 @@ def getLastModificationDate(repository_name):
     # Obtém o repositório desejado
     repo = g.get_repo(repository_name)
 
-    # Obtém o último commit do repositório
+    # Obtém o penúltimo commit do repositório
     print("Qtde de commits:", len(list(repo.get_commits())))
-    commit = repo.get_commits()[0]
+    commit = repo.get_commits()[1]
     lastCreationCommitFormatted = commit.commit.author.date.strftime('%d-%m-%Y %H:%M:%S')
     return lastCreationCommitFormatted
 
@@ -31,8 +31,8 @@ def getRepositoryName():
     for artifact in artifacts:
         repository_name = artifact["FullRepoName"]
         print("Repository name:", repository_name)
-        lastDate = getLastModificationDate(repository_name)
-        sendLastModificationDateToFile("lastModification.txt", repository_name, lastDate)
+        lastButOneDate = getLastButOneModificationDate(repository_name)
+        sendLastButOneModificationDateToFile("lastButOneModification.txt", repository_name, lastButOneDate)
 
 if __name__ == "__main__":
     getRepositoryName()

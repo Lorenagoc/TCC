@@ -3,35 +3,35 @@ scalatest/scalatest:118 days, 0:03:27
 junit-team/junit5:3 days, 23:05:02
 cbeust/testng:23 days, 0:03:27
 qos-ch/slf4j:4:36:12
-apache/logging-log4j2:0:57:43
+apache/logging-log4j2:1 day, 1:57:00
 qos-ch/logback:0:00:16
-apache/commons-logging:6 days, 23:57:31
+apache/commons-logging:0:00:17
 tinylog-org/tinylog:64 days, 14:12:22
 Netflix/blitz4j:1937 days, 7:32:49
 EsotericSoftware/minlog:0
 google/guava:31 days, 6:37:36
 spring-projects/spring-framework:1:28:37
-apache/commons-lang:6 days, 23:20:54
+apache/commons-lang:0:00:12
 codehaus-plexus/plexus-utils:81 days, 13:50:59
 mockito/mockito:66 days, 10:21:12
 easymock/easymock:242 days, 6:56:23
 powermock/powermock:3:34:13
 jmock-developers/jmock-library:43 days, 8:01:46
 bcgit/bc-java:1 day, 19:10:47
-apache/commons-crypto:5 days, 19:35:05
+apache/commons-crypto:0:00:12
 facebookarchive/conceal:285 days, 9:12:14
 rtyley/spongycastle:134 days, 11:54:47
 google/keyczar:25 days, 4:45:31
-google/conscrypt:1 day, 22:41:29
+google/conscrypt:16 days, 0:53:29
 google/gson:73 days, 14:35:36
 fangyidong/json-simple:15 days, 11:14:13
-FasterXML/jackson-databind:16:51:30
+FasterXML/jackson-databind:0:10:03
 alibaba/fastjson:154 days, 12:23:12
 h2database/h2database:24 days, 18:05:25
 w11k/lsql:138 days, 16:40:57
 apache/derby:23 days, 20:36:19
 mysql/mysql-connector-j:1 day, 10:49:52
-apache/shiro:0:21:07
+apache/shiro:0:23:11
 spring-projects/spring-security:1 day, 1:46:47
 hdiv/hdiv:0:34:43
 acciente/oacc-core:490 days, 20:46:49
@@ -44,10 +44,10 @@ dom4j/dom4j:1015 days, 10:45:01
 hunterhacker/jdom:2439 days, 18:52:30
 javaee/jaxb-v2:18 days, 0:31:10
 vert-x3/vertx-mail-client:3:18:55
-apache/commons-email:14:21:53
+apache/commons-email:0:00:10
 javaee/javamail:200 days, 23:13:33
 jakartaee/mail-api:129 days, 23:00:45
-apache/commons-collections:5 days, 9:04:55
+apache/commons-collections:8 days, 14:50:05
 vigna/fastutil:0:03:03
 jankotek/mapdb:710 days, 19:29:56
 carrotsearch/hppc:189 days, 22:16:10
@@ -55,8 +55,8 @@ stephenc/high-scale-lib:389 days, 17:52:31
 eclipse/eclipse-collections:223 days, 23:56:02
 facebookarchive/jcommon:62 days, 5:28:51
 haifengl/smile:102 days, 23:44:17
-deeplearning4j/deeplearning4j:6 days, 21:06:25
+deeplearning4j/deeplearning4j:15 days, 5:49:38
 Waikato/moa:623 days, 19:08:31
-elki-project/elki:3:58:09
-apache/mahout:34 days, 3:50:41
+elki-project/elki:15:33:47
+apache/mahout:27 days, 23:46:10
 mimno/Mallet:805 days, 0:17:01

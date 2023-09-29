@@ -1,7 +1,3 @@
-junit4:713
-junit4:713
-junit4:713
-scalatest:0
 junit4:7223
 scalatest:17
 junit5:0
