@@ -35,7 +35,7 @@ def getComments(tag):
     user_api_key = 'hDxbIGl*XQDx7qfyHHi9QA(('
     so = StackAPI('stackoverflow', key=user_api_key)
     questions = so.fetch('questions', tagged=[tag, 'java'], sort='votes')
-    page = 1
+    page = 3
     print("Total de perguntas com a tag:", len(questions['items']))
 
     while True:
