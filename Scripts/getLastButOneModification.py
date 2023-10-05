@@ -1,4 +1,5 @@
 from github import Github
+import time
 import json
 
 def sendLastButOneModificationDateToFile(output_file, keyword, num_found):
@@ -15,7 +16,7 @@ def getArtifacts():
 def getLastButOneModificationDate(repository_name):
     
     # Inicializa a instância do Github
-    g = Github("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", timeout=30)
+    g = Github("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", timeout=30)
 
     # Obtém o repositório desejado
     repo = g.get_repo(repository_name)
@@ -33,6 +34,8 @@ def getRepositoryName():
         print("Repository name:", repository_name)
         lastButOneDate = getLastButOneModificationDate(repository_name)
         sendLastButOneModificationDateToFile("lastButOneModification.txt", repository_name, lastButOneDate)
+         # Espere 1 segundo entre as solicitações para evitar exceder os limites de taxa
+        time.sleep(1)
 
 if __name__ == "__main__":
     getRepositoryName()
