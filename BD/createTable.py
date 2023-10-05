@@ -1,52 +1,32 @@
-import sqlite3
-import os
+import pandas as pd
+import psycopg2
+from sqlalchemy import create_engine
 
-# Nome do arquivo do banco de dados SQLite
-nome_banco_de_dados = 'librariesMetrics.db'
+pasta = '/home/lorena/Documentos/TCC/Scripts/Results'
 
-# Conecta ao banco de dados (ele será criado se não existir)
-conn = sqlite3.connect(nome_banco_de_dados)
+dados_bibliotecas = pd.read_csv('/home/lorena/Documentos/TCC/Scripts/Results/result.txt', sep=";", header=None)
 
-# Cria um cursor para executar comandos SQL
-cursor = conn.cursor()
+dados_bibliotecas.columns = ["Nomes", "Popularidade", "Downloads", "Frequência média de releases", "Issues abertos", "Qtde de perguntas", "Estrelas"]
 
-# Cria uma tabela com uma coluna para o nome da biblioteca
-cursor.execute('''CREATE TABLE IF NOT EXISTS metrics (
-                    id INTEGER PRIMARY KEY,
-                    library_name TEXT
-                )''')
+print(dados_bibliotecas)
 
-# Diretório onde os arquivos txt estão localizados
-diretorio = '../Scripts'
+# Substitua pelos seus detalhes de conexão
+db_config = {
+    'user': 'postgres',
+    'password': 'root',
+    'host': 'localhost',
+    'port': '5432',  # Porta padrão do PostgreSQL
+    'database': 'metrics'
+}
 
-# Itera pelos arquivos e inserir o nome da biblioteca na tabela de bibliotecas
-for nome_arquivo in os.listdir(diretorio):
-    if nome_arquivo.endswith('.txt'):
-        nome_biblioteca = nome_arquivo.split(':')[0]  # Extrai o nome da biblioteca
-        cursor.execute('INSERT INTO metrics (library_name) VALUES (?)', (nome_biblioteca,))
+# Crie uma conexão com o PostgreSQL
+conn = psycopg2.connect(**db_config)
 
-# Cria uma coluna para cada arquivo txt como colunas dinâmicas na tabela principal
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS libraries (
-        id INTEGER PRIMARY KEY,
-        library_name_id INTEGER,
-        metric TEXT,
-        FOREIGN KEY (library_name_id) REFERENCES metrics (id)
-    )
-''')
+# Crie um motor SQLAlchemy
+engine = create_engine(f'postgresql://{db_config["user"]}:{db_config["password"]}@{db_config["host"]}:{db_config["port"]}/{db_config["database"]}')
 
-# Itera pelos arquivos novamente e inseri o conteúdo na tabela de dados
-for nome_arquivo in os.listdir(diretorio):
-    if nome_arquivo.endswith('.txt'):
-        nome_biblioteca = nome_arquivo.split(':')[0]
-        with open(os.path.join(diretorio, nome_arquivo), 'r') as arquivo:
-            conteudo = arquivo.read()
-            # Obtem o ID da biblioteca correspondente
-            cursor.execute('SELECT id FROM metrics WHERE library_name = ?', (nome_biblioteca,))
-            biblioteca_id = cursor.fetchone()[0]
-            # Insere o conteúdo na tabela de dados
-            cursor.execute('INSERT INTO metrics (library_name_id, metric) VALUES (?, ?)', (biblioteca_id, conteudo))
+# Salve o DataFrame na tabela do PostgreSQL
+dados_bibliotecas.to_sql('results', engine, if_exists='replace', index=False)
 
-# Confirma as mudanças e fecha a conexão
-conn.commit()
+# Feche a conexão com o PostgreSQL
 conn.close()
