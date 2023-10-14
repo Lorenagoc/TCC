@@ -1,9 +1,12 @@
 from github import Github
+from github import RateLimitExceededException
+import calendar
+import time
 import json
 
 def sendLastModificationDateToFile(output_file, keyword, num_found):
     output_file = open(output_file, "a")
-    output_file.write(keyword + ":" + str(num_found) + "\n")
+    output_file.write(keyword + ";" + str(num_found) + "\n")
     output_file.close()
 
 def getArtifacts():
@@ -13,18 +16,29 @@ def getArtifacts():
     return artifacts
 
 def getLastModificationDate(repository_name):
-    
-    # Inicializa a instância do Github
-    g = Github("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", timeout=30)
+    while True:
+        try:
+             # Inicializa a instância do Github
+            g = Github("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", timeout=30)
 
-    # Obtém o repositório desejado
-    repo = g.get_repo(repository_name)
-
-    # Obtém o último commit do repositório
-    print("Qtde de commits:", len(list(repo.get_commits())))
-    commit = repo.get_commits()[0]
-    lastCreationCommitFormatted = commit.commit.author.date.strftime('%d-%m-%Y %H:%M:%S')
-    return lastCreationCommitFormatted
+            repo = g.get_repo(repository_name)
+            # Obtém o último commit do repositório
+            commits = list(repo.get_commits())
+            commit = commits[0]
+            lastCreationCommitFormatted = commit.commit.author.date.strftime('%d-%m-%Y %H:%M:%S')
+            return lastCreationCommitFormatted
+        except StopIteration:
+            break  # loop end
+        except RateLimitExceededException:
+            search_rate_limit = g.get_rate_limit().search
+            reset_timestamp = calendar.timegm(search_rate_limit.reset.timetuple())
+            # add 10 seconds to be sure the rate limit has been reset
+            sleep_time = reset_timestamp - calendar.timegm(time.gmtime()) + 10
+            time.sleep(sleep_time)
+            continue
+        except Exception as e:
+            print(f"Erro ao obter dados do repositório {repository_name}: {str(e)}")
+            return None
 
 def getRepositoryName():
     artifacts = getArtifacts()
