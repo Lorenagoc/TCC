@@ -6,7 +6,7 @@ pasta = '/home/lorena/Documentos/TCC/Scripts/Results'
 
 dados_bibliotecas = pd.read_csv('/home/lorena/Documentos/TCC/Scripts/Results/result.txt', sep=";", header=None)
 
-dados_bibliotecas.columns = ["Nomes", "Popularidade", "Downloads", "Frequência média de releases", "Issues abertos", "Qtde de perguntas", "Estrelas", "Última modificação", "Penúltima modificação"]
+dados_bibliotecas.columns = ["Nomes", "Popularidade", "Downloads", "Frequência média de releases", "Issues abertos", "Qtde de perguntas", "Estrelas", "Última modificação", "Penúltima modificação", "Domínio"]
 
 print(dados_bibliotecas)
 
