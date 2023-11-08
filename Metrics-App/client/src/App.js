@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import "./App.css";
 import Header from "./components/Header";
@@ -7,24 +7,25 @@ import { MetricsProvider, MetricsContext } from './components/MetricsContext';
 
 const App = () => {
   const baseURL = 'http://localhost:4000/libraries';
-  const [data, setData] = useState(null);
-  const { domain, setDomain } = useContext(MetricsContext);
+  const { setData } = useContext(MetricsContext);
+  const { domain } = useContext(MetricsContext);
 
   useEffect(() => {
-    axios.get(`${baseURL}/JSON`)
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
-  
+    if (domain !== '') {
+      axios.get(`${baseURL}/${domain}`)
+        .then(response => {
+          setData(response?.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  }, [domain, setData]);
+
   return (
-    console.log("data -> ", data),
     <div className="App">
       <Header />
-      <SelectComponent/>
+      <SelectComponent />
     </div>
 
   )

@@ -20,7 +20,8 @@ export const CenteredTable = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 81vh;
     max-width: 1000px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    padding-bottom: 20px;
 `;

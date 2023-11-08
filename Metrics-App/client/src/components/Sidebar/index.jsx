@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Container, Content } from './styles'
 import {
     FaTimes,
@@ -16,19 +16,21 @@ import {
     FaBoxes,
     FaRobot
 } from 'react-icons/fa'
+import { MetricsContext } from '../MetricsContext';
 
 import SidebarItem from '../SidebarItem';
 
-const Sidebar = ({ active }) => {
+const Sidebar = () => {
+    const { sidebar, setSidebar } = useContext(MetricsContext);
 
     const domains = ['Testing', 'Logging', 'Utilities', 'Mocking', 'Cryptography', 'JSON', 'Databases', 'Security', 'Object-relational Mapping', 'XML Processing', 'Mail Client', 'Collections', 'Machine Learning'];
 
     const closeSidebar = () => {
-        active(false)
+        setSidebar(false);
     }
 
     return (
-        <Container sidebar={active}>
+        <Container sidebar={sidebar}>
             <FaTimes onClick={closeSidebar} />
             <Content>
                 <SidebarItem Icon={FaCode} Text={`${domains[0]}`} />

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,22 +8,16 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { TableContainerStyles } from './styles';
 
-function createData(name, popularity, downloads, releases, issues, questions, stars, lastModification, penultimateModification) {
-  return { name, popularity, downloads, releases, issues, questions, stars, lastModification, penultimateModification };
-}
+export default function BasicTable({ selectedLibrary }) {
 
-const row = createData('JUnit', 159, 6.0, 24, 4.0, 5.0, 7.52, 9.52, 11);
-
-
-export default function BasicTable() {
   return (
     <TableContainerStyles>
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell colSpan={8} style={{ fontWeight: 'bold', textAlign: 'center' }}>
-                {row.name}
+              <TableCell colSpan={8} style={{ fontWeight: 'bold', textAlign: 'center', backgroundColor: '#939699' }}>
+                {selectedLibrary?.nomes}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -39,17 +33,17 @@ export default function BasicTable() {
           </TableHead>
           <TableBody>
             <TableRow
-              key={row.name}
+              key={selectedLibrary?.nomes}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell align="right">{row.popularity}</TableCell>
-              <TableCell align="right">{row.downloads}</TableCell>
-              <TableCell align="right">{row.releases}</TableCell>
-              <TableCell align="right">{row.issues}</TableCell>
-              <TableCell align="right">{row.questions}</TableCell>
-              <TableCell align="right">{row.stars}</TableCell>
-              <TableCell align="right">{row.lastModification}</TableCell>
-              <TableCell align="right">{row.penultimateModification}</TableCell>
+              <TableCell align="right">{selectedLibrary?.popularidade}</TableCell>
+              <TableCell align="right">{selectedLibrary?.downloads}</TableCell>
+              <TableCell align="right">{selectedLibrary?.freq_media_releases}</TableCell>
+              <TableCell align="right">{selectedLibrary?.issues_abertos}</TableCell>
+              <TableCell align="right">{selectedLibrary?.qtde_perguntas}</TableCell>
+              <TableCell align="right">{selectedLibrary?.estrelas}</TableCell>
+              <TableCell align="right">{selectedLibrary?.ultima_modificacao}</TableCell>
+              <TableCell align="right">{selectedLibrary?.penultima_modificacao}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
